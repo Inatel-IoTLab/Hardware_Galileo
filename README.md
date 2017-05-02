@@ -1,1 +1,3 @@
 # Hardware_Galileo
+## Características
+- 
