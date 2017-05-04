@@ -21,6 +21,7 @@ Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazi
 
 É necessario que a placa esteja na mesma rede ethernete que o seu computador. conecte o cabo de rede na placa atraves da porta de Ethernete. Para acessar o Linux da placa precisamos antes descobrir o ip. Abra a IDE do Arduino e execute o seguinte programa:
 
+```bash
 void setup() {
   Serial.begin(9600);
   //aperte 'a' para mostrar o ip
@@ -35,6 +36,8 @@ void setup() {
 void loop() {
  
 }
+```
+
 Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
 Para conectar no terminal do Yocto vamos utilizar o programa putty. Baixe http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'. Será aberta uma janela terminal do Yocto solicitando um login. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes.
