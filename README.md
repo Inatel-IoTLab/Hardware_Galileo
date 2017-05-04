@@ -11,7 +11,7 @@
 * [2º Passo: Conectar Galileo Gen 1 a uma rede Ethernet](#passo2)
 * [3º Passo: Executar programas pelo Putty](#passo3)
 * [4º Passo: Montagem do Hardware](#passo4)
-* [4º Passo: Conexão com o MQTTLens](#passo4)
+* [5º Passo: Conexão com o MQTTLens](#passo4)
 
 <a name="passo1"></a>
 ## 1º Passo: Instalar o Kit IoT Developer - Yocto:
