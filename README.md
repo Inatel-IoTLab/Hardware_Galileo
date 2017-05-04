@@ -9,7 +9,7 @@
 
 * [1º Passo: Instalar o Kit IoT Developer - Yocto](#passo1)
 * [2º Passo: Conectar Galileo Gen 1 a uma rede Ethernet](#passo2)
-* [3º Passo: Executar programas pelo Putty - através do Putty](#passo3)
+* [3º Passo: Executar programas pelo Putty](#passo3)
 * [4º Passo: Conexão com o MQTTLens](#passo4)
 
 <a name="passo1"></a>
@@ -42,7 +42,7 @@ Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/ha
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
 Para conectar no terminal do Yocto vamos utilizar o programa putty. Baixe http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'. Será aberta uma janela terminal do Yocto solicitando um login. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes.
 <a name="passo3"></a>
-## 3º Passo: Executar programas pelo Putty - através do Putty:
+## 3º Passo: Executar programas pelo Putty :
 Crie na raiz do cartão SD um arquivo chamado Final.py (tudo em minúsculas) e coloque dentro dele o código abaixo. Recomendamos utilizar o programa Notepad++, selecionando o caracter de fim de linha UNIX/OSX no menu EDIT => EOL Conversion:
 
 ```bash
