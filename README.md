@@ -45,6 +45,7 @@ Para conectar no terminal do Yocto vamos utilizar o programa putty. Baixe http:/
 ## 3º Passo: Executar programas pelo Putty - através do Putty:
 Crie na raiz do cartão SD um arquivo chamado Final.py (tudo em minúsculas) e coloque dentro dele o código abaixo. Recomendamos utilizar o programa Notepad++, selecionando o caracter de fim de linha UNIX/OSX no menu EDIT => EOL Conversion:
 
+```bash
 import paho.mqtt.client as paho
 from time import gmtime, strftime
 import paho.mqtt.client as mqtt
@@ -175,7 +176,7 @@ if __name__ == '__main__':
 	    publish_delay=10
         else:    
             publish_delay=publish_delay-1
-       
+```      
 Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo Linux usando os comandos:
 
 - cd .. sair da pasta
