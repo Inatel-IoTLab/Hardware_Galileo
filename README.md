@@ -64,7 +64,11 @@ Será aberta uma janela terminal do Yocto solicitando um login. Na primeira cone
 
 <a name="passo3"></a>
 ## 3º Passo: Executar programas pelo Putty:
-Crie na raiz do cartão SD um arquivo chamado Final.py (tudo em minúsculas) e coloque dentro dele o código abaixo. Recomendamos utilizar o programa Notepad++, selecionando o caracter de fim de linha UNIX/OSX no menu EDIT => EOL Conversion:
+Crie um arquivo chamado Final.py (tudo em minúsculas) dentro do sd e coloque o código abaixo. Conforme imagem:
+
+![salvamento](https://cloud.githubusercontent.com/assets/17688443/25827558/3045f6d6-3422-11e7-9a12-1daec19dab54.png)
+
+Pode ser utilizador qualquer editor, mas é muito importante manter a formatação, já que estamos lidando com codigos em Python:
 
 ```bash
 import paho.mqtt.client as paho
