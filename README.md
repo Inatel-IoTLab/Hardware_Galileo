@@ -56,7 +56,7 @@ Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip d
 
 Para conectar com o terminal do Yocto vamos utilizar o programa putty. Baixe em http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'.  
 
-![putty](https://cloud.githubusercontent.com/assets/17688443/25825161/4908213a-3418-11e7-8a06-93a0716e5189.png)
+![putty](https://cloud.githubusercontent.com/assets/17688443/25827234/89740222-3420-11e7-8cb0-38af568f6742.png)
 
 Será aberta uma janela terminal do Yocto solicitando um login. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. 
 
@@ -234,5 +234,5 @@ Agora falta apenas configurar o topico para a mesmo que o Galileo está mandando
 ![de](https://cloud.githubusercontent.com/assets/17688443/25827124/08cf6b70-3420-11e7-85e7-d30625fe988f.png)
 
 E pronto, o broke está pronto para receber suas mensagens!! 
-Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o codigo e divirtar-se :D
-Caso o led não acenda verifique se sua polaridade está correta.
+Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o codigo e divirtar-se!
+Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do codigo aperte ctrl+c no pront.
