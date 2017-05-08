@@ -1,5 +1,5 @@
 # Hardware_Galileo-gen-1
-## Conectando Galileo ao MQTTLens
+## Comando e Monitoramento do Galileo usando MQTTLens
 ### Caracteristicas do Galileo
 - Processador Intel Quark SoC X1000 32-bit 400MHz
 - Alimentação 5V
