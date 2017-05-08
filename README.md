@@ -10,8 +10,7 @@
 * [1º Passo: Instalar o Kit IoT Developer - Yocto](#passo1)
 * [2º Passo: Conectar Galileo Gen 1 a uma rede Ethernet](#passo2)
 * [3º Passo: Executar programas pelo Putty](#passo3)
-* [4º Passo: Montagem do Hardware](#passo4)
-* [5º Passo: Conexão com o MQTTLens](#passo4)
+* [4º Passo: Conexão com o MQTTLens](#passo4)
 
 <a name="passo1"></a>
 ## 1º Passo: Instalar o Kit IoT Developer - Yocto:
@@ -199,6 +198,10 @@ if __name__ == '__main__':
         else:    
             publish_delay=publish_delay-1
 ```      
+Nesse program em Python que vai aciona e monitorar a porta 5 do Galileo. O circuito é composto por 1 leds e 1 resistores de 330 ohms, faça montagem conforme imagem abaixo:
+
+![2](https://cloud.githubusercontent.com/assets/17688443/25826250/83551baa-341c-11e7-9322-1581b8be44d4.png)
+
 Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo Linux usando os comandos:
 
 - cd .. //sair da pasta
@@ -206,10 +209,30 @@ Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo L
 - ls //ver o que tem na pasta
 - pwn //ver em qual pasta está
 
-navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando python Final.py 
+Navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando python Final.py 
 
 ![final](https://cloud.githubusercontent.com/assets/17688443/25825195/7ac410e4-3418-11e7-8d16-8025092bb820.png)
 
-<a name="passo4"></a>
-## 4º Passo: Montagem do Hardware:
+Se tudo estiver certo irá aparecer a mensagem essas mensagem de conexão bem sucedida no pront:
 
+![sucesso](https://cloud.githubusercontent.com/assets/17688443/25826623/e06b29fa-341d-11e7-9627-da27cfd764ae.png)
+
+Deixe o codigo executando enquanto realiza o proximo passo. 
+
+<a name="passo4"></a>
+## 4º Passo: Conexão com o MQTTLens:
+O controle de estados do led sera feito atravez de mesagens enviadas e recebidas do broke MQTTLens. Primeiramente adicione a extensão MQTTLens ao seu navegador Chrome pelo link: https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm clique em "+ usar no chrome". Apos instalado abra e adicione um nova conexão no "+":
+
+![mais](https://cloud.githubusercontent.com/assets/17688443/25826876/edb3e740-341e-11e7-95bf-e9a99df3c7a9.png)
+
+Faça as sequintes modificações, e salve: 
+
+![mqttcdfgv](https://cloud.githubusercontent.com/assets/17688443/25826947/43a6d3f6-341f-11e7-9b57-15f510280604.png)
+
+Agora falta apenas configurar o topico para a mesmo que o Galileo está mandando as mensagens:
+
+![de](https://cloud.githubusercontent.com/assets/17688443/25827124/08cf6b70-3420-11e7-85e7-d30625fe988f.png)
+
+E pronto, o broke está pronto para receber suas mensagens!! 
+Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o codigo e divirtar-se :D
+Caso o led não acenda verifique se sua polaridade está correta.
