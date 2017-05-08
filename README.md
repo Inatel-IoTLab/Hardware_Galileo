@@ -20,14 +20,16 @@ Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazi
 (http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
 
 Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. baixe e instale o gravador de cartão SD em: http://sourceforge.net/projects/win32diskimager. Selecione onde esta o seu micro SD e click em "Write".
+
 ![atulaizar a data](https://cloud.githubusercontent.com/assets/17688443/25824618/718cdf44-3416-11e7-9963-569d5faf189c.png)
  
  Coloque o sd  no slot no Galileo.
+![sd](https://cloud.githubusercontent.com/assets/17688443/25824783/e9e28dfe-3416-11e7-809e-418264fc7331.png)
 
 <a name="passo2"></a>
 ## 2º Passo: Conectar Galileo Gen 1 a uma rede Ethernete:
 
-É necessario que a placa esteja na mesma rede ethernete que o seu computador. conecte o cabo de rede na placa atraves da porta de Ethernete. Para acessar o Linux da placa precisamos antes descobrir o ip. Abra a IDE do Arduino e execute o seguinte programa:
+É necessario que a placa esteja na mesma rede ethernete que o seu computador, pois faremos uma conexão via SSH. Conecte o cabo de rede na placa atraves da porta. Para acessar o Linux da placa precisamos antes descobrir o ip. Abra a IDE do Arduino e execute o seguinte programa:
 
 ```bash
 void setup() {
@@ -45,10 +47,18 @@ void loop() {
  
 }
 ```
+	Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe aqui.
+	Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
 
-Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
-Para conectar no terminal do Yocto vamos utilizar o programa putty. Baixe http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'. Será aberta uma janela terminal do Yocto solicitando um login. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes.
+
+![ip](https://cloud.githubusercontent.com/assets/17688443/25825135/29f54660-3418-11e7-8056-863d2a8f0807.png)
+
+Para conectar com o terminal do Yocto vamos utilizar o programa putty. Baixe em http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'. 
+![putty](https://cloud.githubusercontent.com/assets/17688443/25825161/4908213a-3418-11e7-8a06-93a0716e5189.png)
+Será aberta uma janela terminal do Yocto solicitando um login. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. 
+![sim](https://cloud.githubusercontent.com/assets/17688443/25825171/5481514e-3418-11e7-96af-a54cf298f493.png)
+
 <a name="passo3"></a>
 ## 3º Passo: Executar programas pelo Putty:
 Crie na raiz do cartão SD um arquivo chamado Final.py (tudo em minúsculas) e coloque dentro dele o código abaixo. Recomendamos utilizar o programa Notepad++, selecionando o caracter de fim de linha UNIX/OSX no menu EDIT => EOL Conversion:
@@ -192,7 +202,10 @@ Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo L
 - ls ver o que tem na pasta
 - pwn ver onde está
 
-navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando 
+navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando python Final.py 
+
+![final](https://cloud.githubusercontent.com/assets/17688443/25825195/7ac410e4-3418-11e7-8d16-8025092bb820.png)
+
 
 <a name="passo4"></a>
 ## 4º Passo: Montagem do Hardware:
