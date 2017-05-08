@@ -24,6 +24,7 @@ Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-d
 ![atulaizar a data](https://cloud.githubusercontent.com/assets/17688443/25824618/718cdf44-3416-11e7-9963-569d5faf189c.png)
  
  Coloque o sd  no slot no Galileo.
+ 
 ![sd](https://cloud.githubusercontent.com/assets/17688443/25824783/e9e28dfe-3416-11e7-809e-418264fc7331.png)
 
 <a name="passo2"></a>
@@ -47,16 +48,19 @@ void loop() {
  
 }
 ```
-	Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe aqui.
-	Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
+Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe aqui.
+Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
 
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
 
 ![ip](https://cloud.githubusercontent.com/assets/17688443/25825135/29f54660-3418-11e7-8056-863d2a8f0807.png)
 
-Para conectar com o terminal do Yocto vamos utilizar o programa putty. Baixe em http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'. 
+Para conectar com o terminal do Yocto vamos utilizar o programa putty. Baixe em http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'.  
+
 ![putty](https://cloud.githubusercontent.com/assets/17688443/25825161/4908213a-3418-11e7-8a06-93a0716e5189.png)
+
 Será aberta uma janela terminal do Yocto solicitando um login. Na primeira conexão aparecerá uma mensagem perguntando se você deseja armazenar as chaves de acesso dessa conexão. Clique em Yes. O login inicial da placa é o root. Portanto digite root e pressione a tecla enter. 
+
 ![sim](https://cloud.githubusercontent.com/assets/17688443/25825171/5481514e-3418-11e7-96af-a54cf298f493.png)
 
 <a name="passo3"></a>
@@ -197,15 +201,14 @@ if __name__ == '__main__':
 ```      
 Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo Linux usando os comandos:
 
-- cd .. sair da pasta
-- cd nome_da_pasta entrar na pasta 
-- ls ver o que tem na pasta
-- pwn ver onde está
+- cd .. //sair da pasta
+- cd nome_da_pasta //entrar na pasta 
+- ls //ver o que tem na pasta
+- pwn //ver em qual pasta está
 
 navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando python Final.py 
 
 ![final](https://cloud.githubusercontent.com/assets/17688443/25825195/7ac410e4-3418-11e7-8d16-8025092bb820.png)
-
 
 <a name="passo4"></a>
 ## 4º Passo: Montagem do Hardware:
