@@ -19,11 +19,11 @@
 Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazio, e de no minimo  4GB e no maximo 32GB. Faça o download da Imagem do Sistema Operacional na pagina de downloads da Intel® (https://software.intel.com/en-us/iot/hardware/galileo/downloads) ou vá direto para o download no link: https://software.intel.com/galileo-image/latest. Após baixar o arquivo faça o download do 7-Zip 
 (http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
 
+Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. baixe e instale o gravador de cartão SD em: http://sourceforge.net/projects/win32diskimager. Selecione onde esta o seu micro SD e click em "Write".
+![atulaizar a data](https://cloud.githubusercontent.com/assets/17688443/25824618/718cdf44-3416-11e7-9963-569d5faf189c.png)
+ 
+ Coloque o sd  no slot no Galileo.
 
-
-
-
-Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. baixe e instale o gravador de cartão SD em: http://sourceforge.net/projects/win32diskimager. Selecione onde esta o seu micro SD e click em "Write". Coloque o sd  no slot no Galileo.
 <a name="passo2"></a>
 ## 2º Passo: Conectar Galileo Gen 1 a uma rede Ethernete:
 
