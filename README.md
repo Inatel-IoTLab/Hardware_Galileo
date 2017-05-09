@@ -15,8 +15,7 @@
 <a name="passo1"></a>
 ## 1º Passo: Instalar o Kit IoT Developer - Yocto:
 
-Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazio, e de no minimo  4GB e no maximo 32GB. Faça o download da Imagem do Sistema Operacional na pagina de downloads da Intel® (https://software.intel.com/en-us/iot/hardware/galileo/downloads) ou vá direto para o download no link: https://software.intel.com/galileo-image/latest. Após baixar o arquivo faça o download do 7-Zip 
-(http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
+Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazio, e de no minimo  4GB e no maximo 32GB. Faça o download da Imagem do Sistema Operacional na pagina de downloads da Intel® [Kit IoT Developer](https://software.intel.com/en-us/iot/hardware/galileo/downloads) ou vá direto para o download no [link](https://software.intel.com/galileo-image/latest). Após baixar o arquivo faça o download do [7-Zip](http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
 
 Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. baixe e instale o gravador de cartão SD em: http://sourceforge.net/projects/win32diskimager. Selecione onde esta o seu micro SD e click em "Write".
 
@@ -54,7 +53,9 @@ Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip d
 
 ![ip](https://cloud.githubusercontent.com/assets/17688443/25825135/29f54660-3418-11e7-8056-863d2a8f0807.png)
 
-Para conectar com o terminal do Yocto vamos utilizar o programa putty. Baixe em http://www.putty.org/ e instale. Usando o SSH insira o endereço IP da placa e clique no botão 'Open'.  
+Para conectar com o terminal do Yocto vamos utilizar o programa [putty](http://www.putty.org/). Baixe e instale. 
+
+Usando o SSH insira o endereço IP da placa e clique no botão 'Open'.  
 
 ![putty](https://cloud.githubusercontent.com/assets/17688443/25827234/89740222-3420-11e7-8cb0-38af568f6742.png)
 
@@ -64,7 +65,7 @@ Será aberta uma janela terminal do Yocto solicitando um login. Na primeira cone
 
 <a name="passo3"></a>
 ## 3º Passo: Executar programas pelo Putty:
-Crie um arquivo chamado Final.py (tudo em minúsculas) dentro do sd e coloque o código abaixo. Conforme imagem:
+Crie um arquivo chamado Final.py (tudo em minúsculas) ou baixe o codigo disponvel neste mesmo repositorio, e mova para o SD da placa. Conforme imagem:
 
 ![salvamento](https://cloud.githubusercontent.com/assets/17688443/25827558/3045f6d6-3422-11e7-9a12-1daec19dab54.png)
 
@@ -201,7 +202,13 @@ if __name__ == '__main__':
 	    publish_delay=10
         else:    
             publish_delay=publish_delay-1
-```      
+``` 
+Digite os seguintes comandos, no Putty para clonar o repositório do Paho-MQTT para python:
+
+	git clone https://github.com/eclipse/paho.mqtt.python
+	cd paho.mqtt.python
+	python setup.py install 
+
 Nesse program em Python que vai aciona e monitorar a porta 5 do Galileo. O circuito é composto por 1 leds e 1 resistores de 330 ohms, faça montagem conforme imagem abaixo:
 
 ![2](https://cloud.githubusercontent.com/assets/17688443/25826250/83551baa-341c-11e7-9322-1581b8be44d4.png)
