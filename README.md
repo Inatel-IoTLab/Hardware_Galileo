@@ -15,9 +15,9 @@
 <a name="passo1"></a>
 ## 1º Passo: Instalar o Kit IoT Developer - Yocto:
 
-Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazio, e de no minimo  4GB e no maximo 32GB. Faça o download da Imagem do Sistema Operacional na pagina de downloads da Intel® [Kit IoT Developer](https://software.intel.com/en-us/iot/hardware/galileo/downloads) ou vá direto para o download no [link](https://software.intel.com/galileo-image/latest). Após baixar o arquivo faça o download do [7-Zip](http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
+Para Instalar o Sistema Oprecional Linux na placa é necessario um Micro SD vazio, e de no mínimo  4GB e no máximo 32GB. Faça o download da Imagem do Sistema Operacional na pagina de downloads da Intel® [Kit IoT Developer](https://software.intel.com/en-us/iot/hardware/galileo/downloads) ou vá direto para o download no [link](https://software.intel.com/galileo-image/latest). Após baixar o arquivo faça o download do [7-Zip](http://www.7-zip.org/) e extraia a imagem em uma pasta do computador. 
 
-Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. baixe e instale o gravador de cartão SD em: http://sourceforge.net/projects/win32diskimager. Selecione onde esta o seu micro SD e click em "Write".
+Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-devkit-prof-dev-image-galileo-20171704.direct no formato iot-devkit-prof-dev-image-galileo-AAAADDMM.direct. Baixe e instale o gravador de cartão SD [Win32_Disk_Imager](http://sourceforge.net/projects/win32diskimager). Selecione onde esta o seu micro SD e click em "Write".
 
 ![atulaizar a data](https://cloud.githubusercontent.com/assets/17688443/25824618/718cdf44-3416-11e7-9963-569d5faf189c.png)
  
@@ -26,9 +26,9 @@ Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex: iot-d
 ![sd](https://cloud.githubusercontent.com/assets/17688443/25824783/e9e28dfe-3416-11e7-809e-418264fc7331.png)
 
 <a name="passo2"></a>
-## 2º Passo: Conectar Galileo Gen 1 a uma rede Ethernete:
+## 2º Passo: Conectar Galileo Gen 1 a uma rede Ethernet:
 
-É necessario que a placa esteja na mesma rede ethernete que o seu computador, pois faremos uma conexão via SSH. Conecte o cabo de rede na placa atraves da porta. Para acessar o Linux da placa precisamos antes descobrir o ip. Abra a IDE do Arduino e execute o seguinte programa:
+É necessário que a placa esteja na mesma rede ethernet que o seu computador, pois faremos uma conexão via SSH. Conecte o cabo de rede na placa através da porta. Para acessar o Linux da placa precisamos antes descobrir o ip. Abra a IDE do Arduino e execute o seguinte programa:
 
 ```bash
 void setup() {
@@ -46,7 +46,7 @@ void loop() {
  
 }
 ```
-Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe [aqui](https://software.intel.com/en-us/iot/hardware/galileo/dev-kit).
+Obeservação: É necessário a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe [aqui](https://software.intel.com/en-us/iot/hardware/galileo/dev-kit).
 
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
 
@@ -64,11 +64,11 @@ Será aberta uma janela terminal do Yocto solicitando um login. Na primeira cone
 
 <a name="passo3"></a>
 ## 3º Passo: Executar programas pelo Putty:
-Crie um arquivo chamado Final.py (tudo em minúsculas) ou baixe o codigo disponvel neste mesmo repositorio, e mova para o SD da placa. Conforme imagem:
+Crie um arquivo chamado Final.py (tudo em minúsculas) ou baixe o código disponível neste mesmo repositório, e mova para o SD da placa. Conforme imagem:
 
 ![salvamento](https://cloud.githubusercontent.com/assets/17688443/25827558/3045f6d6-3422-11e7-9a12-1daec19dab54.png)
 
-Pode ser utilizador qualquer editor, mas é muito importante manter a formatação, já que estamos lidando com codigos em Python:
+Pode ser utilizado qualquer editor, mas é muito importante manter a formatação, já que estamos lidando com códigos em Python:
 
 ```bash
 import paho.mqtt.client as paho
@@ -208,30 +208,30 @@ Digite os seguintes comandos, no Putty para clonar o repositório do Paho-MQTT p
 	cd paho.mqtt.python
 	python setup.py install 
 
-Nesse program em Python que vai aciona e monitorar a porta 5 do Galileo. O circuito é composto por 1 leds e 1 resistores de 330 ohms, faça montagem conforme imagem abaixo:
+Nesse programa em Python que vai acionar e monitorar a porta 5 do Galileo. O circuito é composto por 1 led e 1 resistores de 330 ohms, faça montagem conforme imagem abaixo:
 
 ![2](https://cloud.githubusercontent.com/assets/17688443/25826250/83551baa-341c-11e7-9322-1581b8be44d4.png)
 
-Os arquivos salvo no SD são acessados no endereco de /media/card navegue pelo Linux usando os comandos:
+Os arquivos salvos no SD são acessados no endereço em /media/card navegue pelo Linux usando os comandos:
 
-- cd .. //sair da pasta
-- cd nome_da_pasta //entrar na pasta 
-- ls //ver o que tem na pasta
-- pwn //ver em qual pasta está
+- cd .. ``bash //sair da pasta ``
+- cd nome_da_pasta ``bash//entrar na pasta ``
+- ls ``bash //ver o que tem na pasta``
+- pwn ``bash //ver em qual pasta está``
 
-Navegue ate encontrar o aquivo salvo o Final.py e execute usando o comando python Final.py 
+Navegue até encontrar o arquivo salvo o Final.py e execute usando o comando ``bash python Final.py`` 
 
 ![final](https://cloud.githubusercontent.com/assets/17688443/25825195/7ac410e4-3418-11e7-8d16-8025092bb820.png)
 
-Se tudo estiver certo irá aparecer a mensagem essas mensagem de conexão bem sucedida no pront:
+Se tudo estiver certo irá aparecer essas mensagem de conexão bem sucedida no prompt:
 
 ![sucesso](https://cloud.githubusercontent.com/assets/17688443/25826623/e06b29fa-341d-11e7-9627-da27cfd764ae.png)
 
-Deixe o codigo executando enquanto realiza o proximo passo. 
+Deixe o código executando enquanto realiza o proximo passo. 
 
 <a name="passo4"></a>
 ## 4º Passo: Conexão com o MQTTLens:
-O controle de estados do led sera feito atravez de mesagens enviadas e recebidas do broke MQTTLens. Primeiramente adicione a extensão MQTTLens ao seu navegador Chrome pelo link: https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm clique em "+ usar no chrome". Apos instalado abra e adicione um nova conexão no "+":
+O controle de estados do led será feito através de mesagens enviadas e recebidas do broker MQTTLens. Primeiramente adicione a extensão MQTTLens ao seu navegador Chrome pelo link: https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm clique em "+ usar no chrome". Após instalado abra e adicione uma nova conexão no "+":
 
 ![mais](https://cloud.githubusercontent.com/assets/17688443/25826876/edb3e740-341e-11e7-95bf-e9a99df3c7a9.png)
 
@@ -239,10 +239,10 @@ Faça as sequintes modificações, e salve:
 
 ![mqttcdfgv](https://cloud.githubusercontent.com/assets/17688443/25826947/43a6d3f6-341f-11e7-9b57-15f510280604.png)
 
-Agora falta apenas configurar o topico para a mesmo que o Galileo está mandando as mensagens:
+Agora falta apenas configurar o tópico para o mesmo que o Galileo está mandando as mensagens:
 
 ![de](https://cloud.githubusercontent.com/assets/17688443/25827124/08cf6b70-3420-11e7-85e7-d30625fe988f.png)
 
-E pronto, o broke está pronto para receber suas mensagens!! 
-Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o codigo e divirtar-se!
-Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do codigo aperte ctrl+c no pront.
+E pronto, o broker está pronto para receber suas mensagens!! 
+Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o código e divirtar-se!
+Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do código aperte ctrl+c no prompt.
