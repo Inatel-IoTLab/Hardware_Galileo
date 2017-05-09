@@ -97,6 +97,15 @@ def rc_answers_to_strings(argument):
     }
     return switcher.get(argument, "nothing")
 
+def OnConnectHandler(client, userdata, flags, rc):
+        print(rc_answers_to_strings(rc))
+        
+        topic="lab_oit"
+        qos = 1
+        
+        print("Subscribing to the topic %s with QoS %d" %(topic,qos))
+        client.subscribe(topic, qos)
+
 def OnDisconnecthandler(client, userdata, rc): 
     print("Disconnection returned" + str(rc))
 
@@ -167,7 +176,8 @@ if __name__ == '__main__':
     publish_delay = 10
     bind_address=""	
     client = paho.Client()
-    
+	
+    client.on_connect = OnConnectHandler
     client.on_disconnect = OnDisconnecthandler
     client.on_message = OnMessageHandler
     client.on_subscribe = OnSubscribeHandler
