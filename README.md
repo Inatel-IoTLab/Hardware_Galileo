@@ -214,16 +214,16 @@ Nesse programa em Python que vai acionar e monitorar a porta 5 do Galileo. O cir
 
 Os arquivos salvos no SD são acessados no endereço em /media/card navegue pelo Linux usando os comandos:
 
-- cd .. ``bash //sair da pasta ``
-- cd nome_da_pasta ``bash//entrar na pasta ``
-- ls ``bash //ver o que tem na pasta``
-- pwn ``bash //ver em qual pasta está``
+- cd .. ``//sair da pasta ``
+- cd nome_da_pasta ``//entrar na pasta ``
+- ls ``//ver o que tem na pasta``
+- pwn ``//ver em qual pasta está``
 
-Navegue até encontrar o arquivo salvo o Final.py e execute usando o comando ``bash python Final.py`` 
+Navegue até encontrar o arquivo salvo o Final.py e execute usando o comando ``python Final.py`` 
 
 ![final](https://cloud.githubusercontent.com/assets/17688443/25825195/7ac410e4-3418-11e7-8d16-8025092bb820.png)
 
-Se tudo estiver certo irá aparecer essas mensagem de conexão bem sucedida no prompt:
+Se tudo estiver certo irá aparecer essas mensagens de conexão bem sucedida no prompt:
 
 ![sucesso](https://cloud.githubusercontent.com/assets/17688443/25826623/e06b29fa-341d-11e7-9627-da27cfd764ae.png)
 
