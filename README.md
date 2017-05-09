@@ -46,8 +46,7 @@ void loop() {
  
 }
 ```
-Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe aqui.
-Caso nao tenha instalado a IDE baixe em: https://software.intel.com/en-us/iot/hardware/galileo/dev-kit e instale.
+Obeservação: É necessario a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe [aqui](https://software.intel.com/en-us/iot/hardware/galileo/dev-kit).
 
 Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
 
