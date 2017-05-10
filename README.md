@@ -233,7 +233,7 @@ Deixe o código executando enquanto realiza o proximo passo.
 ## 4º Passo: Conexão com o MQTTLens:
 O controle de estados do led será feito através de mesagens enviadas e recebidas do broker MQTTLens. Primeiramente adicione a extensão MQTTLens ao seu navegador Chrome pelo link: https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm clique em "+ usar no chrome'' Após instalado abra e adicione uma nova conexão no "+":
 
-![mais](https://cloud.githubusercontent.com/assets/17688443/25826876/edb3e740-341e-11e7-95bf-e9a99df3c7a9.png)
+![mais](https://cloud.githubusercontent.com/assets/17688443/25910942/75a12342-3588-11e7-96eb-9b7573aa48eb.png)
 
 Faça as sequintes modificações, e salve: 
 
@@ -243,6 +243,6 @@ Agora falta apenas configurar o tópico para o mesmo que o Galileo está mandand
 
 ![de](https://cloud.githubusercontent.com/assets/17688443/25827124/08cf6b70-3420-11e7-85e7-d30625fe988f.png)
 
-E pronto, o broker está pronto para receber suas mensagens!! 
+O broker está pronto para receber suas mensagens!! 
 Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o código e divirtar-se!
 Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do código aperte ctrl+c no prompt Putty.
