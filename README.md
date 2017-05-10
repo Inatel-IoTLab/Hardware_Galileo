@@ -33,7 +33,7 @@ Atenção: Mude a data para o dia atual renomeando o arquivo da imagem Ex:``iot-
 ```bash
 void setup() {
   Serial.begin(9600);
-  //aperte 'a' para mostrar o ip
+  //digite 'a' para mostrar o ip
   while(Serial.read()!='a'){
     Serial.println("hello");
     delay(1000);
@@ -46,9 +46,9 @@ void loop() {
  
 }
 ```
-Obeservação: É necessário a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe [aqui](https://software.intel.com/en-us/iot/hardware/galileo/dev-kit).
+Obeservação: É necessário a versão 1.6.0 da IDE. Caso não tenha a IDE do Arduino 1.6.0 baixe [aqui](https://www.arduino.cc/en/main/OldSoftwareReleases).
 
-Abra o monitor serial no canto superior direito e aperte 'a' para mostrar o ip da placa.
+Abra o monitor serial no canto superior direito e digite 'a' para mostrar o ip da placa.
 
 ![ip](https://cloud.githubusercontent.com/assets/17688443/25825135/29f54660-3418-11e7-8056-863d2a8f0807.png)
 
@@ -245,4 +245,4 @@ Agora falta apenas configurar o tópico para o mesmo que o Galileo está mandand
 
 O broker está pronto para receber suas mensagens!! 
 Você pode ligar o led digitando "on", desligar com "off" e saber seu estado atual com "state". Use a imaginação, aprimore o código e divirtar-se!
-Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do código aperte ctrl+c no prompt Putty.
+Caso o led não acenda verifique se sua polaridade está correta. Para parar a execução do código aperte ctrl+c no prompt putty.
