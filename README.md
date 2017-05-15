@@ -64,7 +64,7 @@ Será aberta uma janela terminal do Yocto solicitando um login. Na primeira cone
 
 <a name="passo3"></a>
 ## 3º Passo: Executar programas pelo Putty:
-Crie um arquivo chamado Final.py (tudo em minúsculas) ou baixe o código disponível neste mesmo repositório, e mova para o SD da placa. Conforme imagem:
+Crie um arquivo chamado Final.py ou baixe o código disponível neste mesmo repositório, e mova para o SD da placa. Conforme imagem:
 
 ![salvamento](https://cloud.githubusercontent.com/assets/17688443/25827558/3045f6d6-3422-11e7-9a12-1daec19dab54.png)
 
